@@ -117,6 +117,7 @@ sr.reveal('.footer__item', {
 });
 sr.reveal('.footer__copyright');
 
+
 // Video feature play overlay — safe multi-instance handler
 document.querySelectorAll('.site-video').forEach((video) => {
     const container = video.parentElement;
@@ -154,3 +155,34 @@ document.querySelectorAll('.site-video').forEach((video) => {
         }
     });
 });
+
+// Video feature play overlay
+const botoxVideo = document.getElementById('botox-video');
+const botoxPlayBtn = document.getElementById('video-play-btn');
+if (botoxVideo && botoxPlayBtn) {
+    botoxPlayBtn.addEventListener('click', () => {
+        botoxVideo.play();
+        botoxVideo.setAttribute('controls', '');
+        botoxPlayBtn.style.display = 'none';
+        botoxVideo.focus();
+    });
+
+    botoxVideo.addEventListener('ended', () => {
+        botoxPlayBtn.style.display = '';
+        botoxVideo.removeAttribute('controls');
+        botoxVideo.currentTime = 0;
+    });
+
+    // If user clicks the video while playing, pause and show overlay again
+    botoxVideo.addEventListener('click', () => {
+        if (botoxVideo.paused) {
+            botoxVideo.play();
+            botoxPlayBtn.style.display = 'none';
+            botoxVideo.setAttribute('controls', '');
+        } else {
+            botoxVideo.pause();
+            botoxPlayBtn.style.display = '';
+        }
+    });
+}
+

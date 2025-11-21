@@ -68,6 +68,16 @@ Para deploy manual (opcional):
 	- Executar `npm run build` e abrir a página para revisar visualmente.
 	- Verificar console do navegador por erros JS.
 
+
+## Notas de manutenção e pontos importantes
+
+- IDs devem ser únicos: o projeto atualmente contém duas seções `#video-feature` por design; cada bloco de vídeo tem `id="botox-video"` e `id="video-play-btn"` — isso foi tratado no JS para evitar conflitos. Se duplicar/remover um bloco, verifique `js/main.js` para ajustar os seletores.
+- Sempre gere `dist/output.css` após editar `css/input.css` usando `npm run build`. Não edite `dist/output.css` manualmente — ele é um artefato gerado.
+- Verificações recomendadas antes de commits:
+	- Executar `npm run build` e abrir a página para revisar visualmente.
+	- Verificar console do navegador por erros JS.
+
+
 ## Limpeza e melhorias sugeridas
 
 - Consolidar regras de altura do `.hero` — atualmente existem utilitários no HTML e regras em `css/input.css` que podem conflitar. Escolher uma estratégia (preferência: utilitários no HTML para controle rápido) e remover duplicações.
