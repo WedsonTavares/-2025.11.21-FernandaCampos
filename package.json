@@ -1,0 +1,25 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "build": "tailwindcss -i ./css/input.css -o ./dist/output.css",
+  "watch": "tailwindcss -i ./css/input.css -o ./dist/output.css --watch"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WedsonTavares/landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/WedsonTavares/landing-page/issues"
+  },
+  "homepage": "https://github.com/WedsonTavares/landing-page#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
