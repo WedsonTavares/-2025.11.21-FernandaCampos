@@ -71,12 +71,11 @@ Para deploy manual (opcional):
 
 ## Notas de manutenção e pontos importantes
 
-- IDs devem ser únicos: o projeto atualmente contém duas seções `#video-feature` por design; cada bloco de vídeo tem `id="botox-video"` e `id="video-play-btn"` — isso foi tratado no JS para evitar conflitos. Se duplicar/remover um bloco, verifique `js/main.js` para ajustar os seletores.
+- IDs devem ser únicos: o projeto atualmente contém duas seções `#video-feature` por design; cada bloco de vídeo tem classes `site-video` e botões `site-video-play-btn` — o `js/main.js` está preparado para múltiplas instâncias. Se duplicar/remover um bloco, verifique `js/main.js` para ajustar os seletores.
 - Sempre gere `dist/output.css` após editar `css/input.css` usando `npm run build`. Não edite `dist/output.css` manualmente — ele é um artefato gerado.
 - Verificações recomendadas antes de commits:
 	- Executar `npm run build` e abrir a página para revisar visualmente.
 	- Verificar console do navegador por erros JS.
-
 
 ## Limpeza e melhorias sugeridas
 
