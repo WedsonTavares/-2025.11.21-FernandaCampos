@@ -1,8 +1,10 @@
 # Dra. Fernanda Campos — Landing Page
 
-Resumo do projeto, instruções de desenvolvimento e checklist de manutenção para a landing page da Dra. Fernanda Campos.
+[![View on Vercel](https://img.shields.io/badge/View%20on%20Vercel-Open-blue?style=for-the-badge)](https://2025-11-21-fernanda-campos.vercel.app/)
 
-> Nota: Este repositório agora é publicado via Vercel (configuração em `vercel.json`).
+Resumo do projeto, instruções de desenvolvimento e checklist de maintenance para a landing page da Dra. Fernanda Campos.
+
+
 
 ## Visão geral
 
