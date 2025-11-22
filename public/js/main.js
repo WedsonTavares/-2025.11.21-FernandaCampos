@@ -81,9 +81,6 @@ sr.reveal('#video-feature .text-left', { origin: 'right', delay: 400 });
 // Removed reveals for selectors not present in markup: videos_slider, photos_slider
 sr.reveal('.extra_slider', { origin: 'bottom', distance: '60px', delay: 200 });
 
-//depoimentos
-// testimonial reveals: keep the slider reveal only (title/bg not present in markup)
-sr.reveal('.testimonial__slider', { delay: '1000' });
 
 //brands
 sr.reveal('.brands__img', { delay: 600, distance: '100px', interval: 100 });
