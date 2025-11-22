@@ -14,8 +14,8 @@ Principais bibliotecas usadas:
 Estrutura de arquivos (resumida):
 
 - `index.html` — marcação principal da página.
-- `css/input.css` — fonte Tailwind (arquivo fonte). Use `npm run build` para gerar `dist/output.css`.
-- `dist/output.css` — CSS gerado (artefato).
+- `css/input.css` — fonte Tailwind (arquivo fonte). Use `npm run build` para gerar `public/output.css`.
+- `public/output.css` — CSS gerado (artefato).
 - `js/main.js` — scripts principais (nav, Swiper init, ScrollReveal config, player de vídeo).
 - `assets/` — imagens, vídeos e logos usados pelo site.
 - `package.json` — scripts de build e dependências de desenvolvimento.
@@ -63,7 +63,7 @@ Para deploy manual (opcional):
 ## Notas de manutenção e pontos importantes
 
 - IDs devem ser únicos: o projeto atualmente contém duas seções `#video-feature` por design; cada bloco de vídeo tem `id="botox-video"` e `id="video-play-btn"` — isso foi tratado no JS para evitar conflitos. Se duplicar/remover um bloco, verifique `js/main.js` para ajustar os seletores.
-- Sempre gere `dist/output.css` após editar `css/input.css` usando `npm run build`. Não edite `dist/output.css` manualmente — ele é um artefato gerado.
+- Sempre gere `public/output.css` após editar `css/input.css` usando `npm run build`. Não edite `public/output.css` manualmente — ele é um artefato gerado.
 - Verificações recomendadas antes de commits:
 	- Executar `npm run build` e abrir a página para revisar visualmente.
 	- Verificar console do navegador por erros JS.
@@ -72,7 +72,7 @@ Para deploy manual (opcional):
 ## Notas de manutenção e pontos importantes
 
 - IDs devem ser únicos: o projeto atualmente contém duas seções `#video-feature` por design; cada bloco de vídeo tem classes `site-video` e botões `site-video-play-btn` — o `js/main.js` está preparado para múltiplas instâncias. Se duplicar/remover um bloco, verifique `js/main.js` para ajustar os seletores.
-- Sempre gere `dist/output.css` após editar `css/input.css` usando `npm run build`. Não edite `dist/output.css` manualmente — ele é um artefato gerado.
+- Sempre gere `public/output.css` após editar `css/input.css` usando `npm run build`. Não edite `public/output.css` manualmente — ele é um artefato gerado.
 - Verificações recomendadas antes de commits:
 	- Executar `npm run build` e abrir a página para revisar visualmente.
 	- Verificar console do navegador por erros JS.
@@ -89,7 +89,7 @@ Para deploy manual (opcional):
 	- Tornar IDs dos vídeos únicos ou ajustar o `js/main.js` para suportar múltiplos players.
 	- Remover regras CSS duplicadas para `.hero`.
 	- Mover assets não utilizados para `assets/unused/`.
-- Executar o `npm run build` e validar o `dist/output.css` gerado.
+- Executar o `npm run build` e validar o `public/output.css` gerado.
 
 Se quiser que eu aplique alguma das mudanças acima agora, diga quais eu devo executar.
 

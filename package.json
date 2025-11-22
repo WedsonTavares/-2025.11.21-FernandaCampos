@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./css/input.css -o ./public/output.css && cp index.html public/index.html",
+    "build": "tailwindcss -i ./css/input.css -o ./public/output.css && node -e \"require('fs').mkdirSync('public',{recursive:true});require('fs').copyFileSync('index.html','public/index.html');\"",
     "watch": "tailwindcss -i ./css/input.css -o ./public/output.css --watch"
   },
   "repository": {
