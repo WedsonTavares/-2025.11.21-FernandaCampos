@@ -1,6 +1,7 @@
 node_modules/
-dist/
+public/
 output.css
+index.html
 .env
 npm-debug.log*
 .vscode/
