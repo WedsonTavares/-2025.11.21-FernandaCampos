@@ -46,6 +46,20 @@ npx http-server -c-1 .
 # então abra http://localhost:8080
 ```
 
+## Deploy para GitHub Pages
+
+O projeto está configurado para deploy automático no GitHub Pages via GitHub Actions.
+
+Passos para habilitar:
+
+1. No repositório GitHub, vá para **Settings** > **Pages**.
+2. Em "Source", selecione **GitHub Actions**.
+3. O workflow em `.github/workflows/deploy.yml` será executado automaticamente em pushes para `main`, construindo o site e publicando em `https://<username>.github.io/<repo-name>/`.
+
+Para deploy manual (opcional):
+- Vá para a aba **Actions** no repositório.
+- Selecione o workflow "Deploy to GitHub Pages" e clique em **Run workflow**.
+
 ## Notas de manutenção e pontos importantes
 
 - IDs devem ser únicos: o projeto atualmente contém duas seções `#video-feature` por design; cada bloco de vídeo tem `id="botox-video"` e `id="video-play-btn"` — isso foi tratado no JS para evitar conflitos. Se duplicar/remover um bloco, verifique `js/main.js` para ajustar os seletores.
