@@ -21,7 +21,6 @@ assets/videos/
 *.mov
 *.avi
 node_modules/
-public/
 output.css
 index.html
 .env
