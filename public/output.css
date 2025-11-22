@@ -1047,10 +1047,6 @@ video {
   max-width: 48rem;
 }
 
-.max-w-\[1920px\] {
-  max-width: 1920px;
-}
-
 .max-w-\[260px\] {
   max-width: 260px;
 }
@@ -2141,11 +2137,6 @@ video {
   background-color: rgb(244 240 236 / var(--tw-bg-opacity, 1));
 }
 
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
-}
-
 .bg-transparent {
   background-color: transparent;
 }
@@ -2999,6 +2990,12 @@ video {
   forced-color-adjust: none;
 }
 
+/* ========================= */
+
+/*      BASE / TYPOGRAPHY    */
+
+/* ========================= */
+
 body {
   font-family: Jost, sans-serif;
   font-size: 22px;
@@ -3099,83 +3096,88 @@ h6 {
   background-color: rgb(41 47 54 / var(--tw-bg-opacity, 1));
 }
 
-/* Hero Background */
+/* ========================= */
+
+/*       HERO SECTION        */
+
+/* ========================= */
+
+/* HERO — Foto fixa à direita com responsividade perfeita */
 
 .bg-hero {
-  background-image: url(/assets/hero/fotoHero.jpg);
-  /* Slightly smaller on desktop for better composition; anchored to top-right */
-  background-size: 48%;
-  background-position: right top;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-}
-
-.hero {
   position: relative;
-  height: 640px;
+  overflow: hidden;
 }
 
-@media (min-width: 960px) {
-  .hero {
-    height: 720px;
-  }
+/* Imagem entra como camada independente */
+
+.bg-hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52%;
+  height: 100%;
+  background-image: url("assets/hero/fotoHero.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
 }
 
-@media (min-width: 1200px) {
-  .hero {
-    height: 840px;
-  }
+/* Garante que o texto fique acima */
+
+.hero__text {
+  position: relative;
+  z-index: 20;
 }
 
-.hero::before {
-  /* disabled by default; only show a left-side fade on desktop */
-  content: '';
-  display: none;
-}
-
-/* Responsividade para Hero */
-
-@media (max-width: 780px) {
-  .bg-hero {
-    background-position: center center;
-  }
-}
+/* TABLET */
 
 @media (max-width: 1023px) {
-  .hero::before {
+  .bg-hero::after {
+    width: 60%;
+  }
+}
+
+/* MOBILE — remove a imagem */
+
+@media (max-width: 768px) {
+  .bg-hero::after {
     display: none;
   }
 }
 
-/* Tablet-specific background sizing (smaller than desktop, larger than mobile) */
+/* ========================= */
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .bg-hero {
-    background-size: 55%;
-    background-position: right top;
+/*       RESPONSIVIDADE      */
+
+/* ========================= */
+
+/* Tablet — imagem mais larga */
+
+@media (max-width: 1200px) {
+  .bg-hero::after {
+    width: 60%;
   }
 }
 
-@media (max-width: 767px) {
-  .bg-hero {
-    background-position: center center;
-    background-size: cover;
+@media (max-width: 1024px) {
+  .bg-hero::after {
+    width: 70%;
   }
 }
 
-@media (max-width: 479px) {
-  .bg-hero {
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
+/* Mobile — remove imagem completamente */
+
+@media (max-width: 768px) {
+  .bg-hero::after {
+    display: none;
   }
 }
 
-/* hero gradient removed — no pseudo-element used anymore */
-
-/* floating WhatsApp button styles removed */
-
-/* Mobile heading standardization: moved from inline <style> to main CSS */
+/* Mobile headings */
 
 @media (max-width: 768px) {
   h1 {
@@ -3193,9 +3195,9 @@ h6 {
     line-height: 1.25;
   }
 
-  /* ensure hero subtitle and other large text reduce on mobile */
-
-  .hero__text p, .work__subtitle, .news__subtitle {
+  .hero__text p,
+    .work__subtitle,
+    .news__subtitle {
     font-size: 14px;
   }
 }
