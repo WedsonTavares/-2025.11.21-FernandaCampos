@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "build": "tailwindcss -i ./css/input.css -o ./dist/output.css && cp index.html dist/index.html",
+  "build": "tailwindcss -i ./css/input.css -o ./dist/output.css && rm -rf dist && mkdir -p dist && cp -r js assets dist/ && mkdir -p dist/css && cp css/swiper-bundle.min.css dist/css/ && cp index.html dist/index.html && sed -i 's|href=\"dist/output.css\"|href=\"output.css\"|g' dist/index.html",
   "watch": "tailwindcss -i ./css/input.css -o ./dist/output.css --watch"
 },
   "repository": {
