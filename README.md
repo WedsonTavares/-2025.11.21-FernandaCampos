@@ -2,6 +2,10 @@
 
 Resumo do projeto, instruções de desenvolvimento e checklist de manutenção para a landing page da Dra. Fernanda Campos.
 
+[![View on GitHub Pages](https://img.shields.io/badge/View%20on%20Pages-Visit-blue?style=for-the-badge)](https://wedsontavares.github.io/-2025.11.21-FernandaCampos/)
+
+> Nota: se o seu repositório Pages estiver em outra URL, atualize o link acima. A URL utilizada presume `https://<username>.github.io/<repo>/` com `username = wedsontavares` e `repo = -2025.11.21-FernandaCampos`.
+
 ## Visão geral
 
 Site estático (landing page) construído com HTML, Tailwind CSS e JavaScript leve. Contém seções principais: `hero`, `intro`, `symptoms`, `procedures-gallery`, `video-feature` (duas instâncias por design), `services`, `about-doctor`, `faq`, `location`, `contact` e `footer`.
