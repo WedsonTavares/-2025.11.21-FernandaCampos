@@ -124,37 +124,12 @@ h6 {
 
 /* MOBILE — imagem atrás do texto*/
 @media (max-width: 768px) {
-
-  .bg-hero::after {
-      display: block !important;
-      width: 100% !important;
-      height: 100% !important;
-      left: 0;
-      right: 0;
-      top: 0;
-      background-image: url("assets/hero/fotoHero.jpg");
-      background-size: cover;
-      background-position: center;
-      opacity: 0.28;        /* mais visível */
-      filter: blur(3px);     /* menos desfoque */
-      z-index: 1;
-      pointer-events: none;
-  }
-
   .hero__text {
-      position: relative;
-      z-index: 20 !important;
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(8px);
-      border-radius: 20px;
-      padding: 20px 24px !important;
-  }
-
-  #hero a.btn {
-      margin-top: 20px !important;
-      margin-bottom: 40px !important;
+      background: transparent !important;
+      backdrop-filter: none !important;
   }
 }
+
 
 
 
@@ -182,9 +157,6 @@ section {
     z-index: 5;
 }
 
-/* ===================================================== */
-/*               CORREÇÕES FINAIS                       */
-/* ===================================================== */
 
 /* 1 — Remove barra branca lateral */
 html, body {
@@ -207,23 +179,10 @@ html, body {
 
 /* 4 — FOTO DO HERO APARECE NO MOBILE FOSCA ATRÁS DO TEXTO */
 @media (max-width: 768px) {
-    .bg-hero::after {
-        display: block !important;
-        width: 100% !important;
-        height: 100% !important;
-        opacity: 0.17;
-        filter: blur(5px);
-        background-size: cover;
-        background-position: center;
-        z-index: 1;
-    }
-
-    .hero__text {
-        background: rgba(255, 255, 255, 0.75);
-        backdrop-filter: blur(8px);
-        border-radius: 20px;
-        padding: 20px 24px !important;
-        z-index: 20 !important;
-        position: relative;
-    }
+  .bg-hero::after {
+      opacity: 0.35 !important;
+      filter: blur(1.5px) !important;
+      background-position: top center !important;
+  }
 }
+
