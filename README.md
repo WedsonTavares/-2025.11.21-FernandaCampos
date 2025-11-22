@@ -2,9 +2,7 @@
 
 Resumo do projeto, instruções de desenvolvimento e checklist de manutenção para a landing page da Dra. Fernanda Campos.
 
-[![View on GitHub Pages](https://img.shields.io/badge/View%20on%20Pages-Visit-blue?style=for-the-badge)](https://wedsontavares.github.io/-2025.11.21-FernandaCampos/)
-
-> Nota: se o seu repositório Pages estiver em outra URL, atualize o link acima. A URL utilizada presume `https://<username>.github.io/<repo>/` com `username = wedsontavares` e `repo = -2025.11.21-FernandaCampos`.
+> Nota: Este repositório agora é publicado via Vercel (configuração em `vercel.json`).
 
 ## Visão geral
 
@@ -50,19 +48,18 @@ npx http-server -c-1 .
 # então abra http://localhost:8080
 ```
 
-## Deploy para GitHub Pages
+## Deploy (Vercel)
 
-O projeto está configurado para deploy automático no GitHub Pages via GitHub Actions.
+Este projeto agora usa o Vercel para hosting. A configuração principal está em `vercel.json` e publica o conteúdo da pasta `public/`.
 
-Passos para habilitar:
+Como publicar no Vercel:
 
-1. No repositório GitHub, vá para **Settings** > **Pages**.
-2. Em "Source", selecione **GitHub Actions**.
-3. O workflow em `.github/workflows/deploy.yml` será executado automaticamente em pushes para `main`, construindo o site e publicando em `https://<username>.github.io/<repo-name>/`.
+1. Acesse https://vercel.com e faça login com sua conta GitHub.
+2. Clique em **Import Project** → escolha o repositório `WedsonTavares/-2025.11.21-FernandaCampos`.
+3. Nas configurações do projeto, confirme que o diretório de build/output é `public/` (o `vercel.json` já declara isso).
+4. Clique em **Deploy**. Se houver restrições de faturamento em sua conta Vercel, verifique a aba **Billing** para reativar o plano necessário.
 
-Para deploy manual (opcional):
-- Vá para a aba **Actions** no repositório.
-- Selecione o workflow "Deploy to GitHub Pages" e clique em **Run workflow**.
+Se preferir manter o site no GitHub Pages, me avise que reabilito a publicação via `gh-pages` (eu posso forçar a criação da branch `gh-pages` com o conteúdo atual de `public/`).
 
 ## Notas de manutenção e pontos importantes
 
