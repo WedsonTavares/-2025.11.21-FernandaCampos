@@ -11,6 +11,8 @@
 
     <!-- ICONS -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
 
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +26,7 @@
 </head>
 
 <body class="bg-white">
-    <header class="sticky top-0 h-[90px] shadow-xl z-30 bg-white">
+    <header class="sticky top-0 h-[90px] shadow-xl z-50 bg-white">
         <div class="container mx-auto h-full">
             <div class="flex items-center justify-between h-full">
                 <!-- TOGGLE MOBILE -->
@@ -60,7 +62,7 @@
             </div>
             <!-- NAV MOBILE -->
             <nav class="lg:hidden">
-                <ul class="fixed w-full h-0 p-0 bg-white overflow-hidden border-t 
+                <ul class="fixed w-full h-0 p-0 bg-white overflow-hidden
                     top-[90px] left-0 right-0 flex flex-col gap-4 transition-all duration-300" id="nav_menu">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#symptoms">Sintomas</a></li>
@@ -88,32 +90,31 @@
         <!-- ========================= -->
         <!--        1. HOME / HERO     -->
         <!-- ========================= -->
-        <section id="hero" class="hero bg-hero relative z-20 h-[540px] lg:h-[720px] xl:h-[760px] xl:rounded-bl-[290px]">
+        <div class="hero-bg-wrapper pb-10 lg:pb-16">
+            <section id="hero" class="hero bg-hero relative overflow-hidden z-20 h-[540px] lg:h-[720px] xl:h-[760px]">
+                <div class="container mx-auto h-full flex items-center justify-center lg:justify-start px-6 lg:px-0">
+                    <div
+                        class="hero__text relative z-20 max-w-[450px] lg:max-w-[560px] flex flex-col items-center lg:items-start text-center lg:text-left bg-white/80 lg:bg-transparent backdrop-blur-sm lg:backdrop-blur-none rounded-2xl lg:rounded-none p-8 lg:p-0 mx-auto lg:mx-0">
+                        <h1 class="mb-6 mt-0 text-[38px] lg:text-[72px] leading-tight font-primary text-primary">
+                            Dermatologia Avançada na Zona Sul de São Paulo
+                        </h1>
+                        <p class="mb-8 text-[20px] lg:text-[22px] text-secondary">
+                            Beleza natural e resultados personalizados com a Dra. Fernanda Campos.
+                        </p>
+                        <a href="#contact" class="btn btn-primary inline-flex items-center mb-0 gap-2 relative z-20">
 
-            <div class="container mx-auto h-full flex items-center justify-center lg:justify-start px-6 lg:px-0">
-                <div
-                    class="hero__text relative z-40 max-w-[450px] lg:max-w-[560px] flex flex-col items-center lg:items-start text-center lg:text-left bg-white/80 lg:bg-transparent backdrop-blur-sm lg:backdrop-blur-none rounded-2xl lg:rounded-none p-8 lg:p-0 mx-auto lg:mx-0">
-                    <h1 class="mb-6 mt-0 text-[38px] lg:text-[72px] leading-tight font-primary text-primary">
-                        Dermatologia Avançada na Zona Sul de São Paulo
-                    </h1>
-                    <p class="mb-8 text-[20px] lg:text-[22px] text-secondary">
-                        Beleza natural e resultados personalizados com a Dra. Fernanda Campos.
-                    </p>
-                    <a href="#contact"
-                        class="btn btn-primary inline-flex items-center -mt-12 lg:-mt-14 mb-0 gap-2 relative z-50">
-                        Agendar consulta
-                        <i class="ri-arrow-right-line text-custom text-[24px]"></i>
-                    </a>
+                            Agendar consulta
+                            <i class="ri-arrow-right-line text-custom text-[24px]"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </section>
-
-
+            </section>
+        </div>
         <!-- ========================= -->
         <!--   2. INTRODUÇÃO (#intro)  -->
         <!-- ========================= -->
         <section id="intro"
-            class="about p-12 relative z-30 mt-10 sm:mt-10 lg:-mt-[80px] xl:-mt-[100px] pt-6 lg:pt-6 bg-accent-secondary text-white">
+            class="about p-12 relative mt-10 sm:mt-10 lg:-mt-[80px] xl:-mt-[100px] pt-6 lg:pt-6 bg-accent-secondary text-white">
             <div class="container mx-auto xl:px-0">
                 <div
                     class="flex flex-col text-center xl:text-left xl:flex-row justify-between items-stretch gap-8 xl:gap-[74px]">

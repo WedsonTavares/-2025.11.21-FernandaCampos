@@ -699,14 +699,6 @@ video {
   z-index: 20;
 }
 
-.z-30 {
-  z-index: 30;
-}
-
-.z-40 {
-  z-index: 40;
-}
-
 .z-50 {
   z-index: 50;
 }
@@ -770,10 +762,6 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.-mt-12 {
-  margin-top: -3rem;
 }
 
 .mb-0 {
@@ -2339,6 +2327,10 @@ video {
   padding-bottom: 80px;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pb-\[24px\] {
   padding-bottom: 24px;
 }
@@ -3088,7 +3080,11 @@ h6 {
   padding: 1.5rem;
 }
 
-/* SwiperPagination */
+/* ========================= */
+
+/*     SWIPER PAGINATION     */
+
+/* ========================= */
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -3096,66 +3092,62 @@ h6 {
   background-color: rgb(41 47 54 / var(--tw-bg-opacity, 1));
 }
 
-/* ========================= */
+/* WRAPPER QUE OCUPA 100% DA TELA */
 
-/*       HERO SECTION        */
+.hero-bg-wrapper {
+  width: 100%;
+  background: #f2f6f9;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
 
-/* ========================= */
+/* HERO CONTEÚDO */
 
-/* HERO — Foto fixa à direita com responsividade perfeita */
+.hero {
+  max-width: 1600px;
+  margin-inline: auto;
+  position: relative;
+  z-index: 10;
+  background-color: transparent;
+}
+
+/* HERO */
 
 .bg-hero {
   position: relative;
   overflow: hidden;
 }
 
-/* Imagem entra como camada independente */
+/* IMAGEM DO HERO */
 
 .bg-hero::after {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  width: 52%;
+  width: min(50%, 780px);
   height: 100%;
   background-image: url("assets/hero/fotoHero.jpg");
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
-  z-index: 1;
+  z-index: 5;
   pointer-events: none;
 }
 
-/* Garante que o texto fique acima */
+/* TEXTO SEMPRE ACIMA */
 
 .hero__text {
   position: relative;
   z-index: 20;
 }
 
-/* TABLET */
-
-@media (max-width: 1023px) {
-  .bg-hero::after {
-    width: 60%;
-  }
-}
-
-/* MOBILE — remove a imagem */
-
-@media (max-width: 768px) {
-  .bg-hero::after {
-    display: none;
-  }
-}
-
 /* ========================= */
 
-/*       RESPONSIVIDADE      */
+/*        RESPONSIVIDADE     */
 
 /* ========================= */
-
-/* Tablet — imagem mais larga */
 
 @media (max-width: 1200px) {
   .bg-hero::after {
@@ -3169,15 +3161,44 @@ h6 {
   }
 }
 
-/* Mobile — remove imagem completamente */
+/* MOBILE — imagem atrás do texto*/
 
 @media (max-width: 768px) {
   .bg-hero::after {
-    display: none;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-image: url("assets/hero/fotoHero.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.28;
+    /* mais visível */
+    filter: blur(3px);
+    /* menos desfoque */
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero__text {
+    position: relative;
+    z-index: 20 !important;
+    background: rgba(255, 255, 255, 0.75);
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 20px 24px !important;
+  }
+
+  #hero a.btn {
+    margin-top: 20px !important;
+    margin-bottom: 40px !important;
   }
 }
 
-/* Mobile headings */
+/* Tipografia mobile */
 
 @media (max-width: 768px) {
   h1 {
@@ -3199,6 +3220,74 @@ h6 {
     .work__subtitle,
     .news__subtitle {
     font-size: 14px;
+  }
+}
+
+/* NAV SEMPRE ACIMA */
+
+header {
+  z-index: 200 !important;
+  position: sticky;
+  top: 0;
+}
+
+/* TODAS AS SEÇÕES ABAIXO DO HERO */
+
+section {
+  position: relative;
+  z-index: 5;
+}
+
+/* ===================================================== */
+
+/*               CORREÇÕES FINAIS                       */
+
+/* ===================================================== */
+
+/* 1 — Remove barra branca lateral */
+
+html, body {
+  overflow-x: hidden !important;
+}
+
+/* 2 — Evita que o wrapper do hero estoure largura */
+
+.hero-bg-wrapper {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* 3 — Aumenta o espaço abaixo do botão no mobile */
+
+@media (max-width: 768px) {
+  #hero a.btn {
+    margin-top: 20px !important;
+    margin-bottom: 40px !important;
+  }
+}
+
+/* 4 — FOTO DO HERO APARECE NO MOBILE FOSCA ATRÁS DO TEXTO */
+
+@media (max-width: 768px) {
+  .bg-hero::after {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0.17;
+    filter: blur(5px);
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+
+  .hero__text {
+    background: rgba(255, 255, 255, 0.75);
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 20px 24px !important;
+    z-index: 20 !important;
+    position: relative;
   }
 }
 
@@ -3292,10 +3381,6 @@ h6 {
     margin-right: 0px;
   }
 
-  .lg\:-mt-14 {
-    margin-top: -3.5rem;
-  }
-
   .lg\:-mt-\[80px\] {
     margin-top: -80px;
   }
@@ -3355,6 +3440,10 @@ h6 {
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .lg\:pb-16 {
+    padding-bottom: 4rem;
   }
 
   .lg\:pt-6 {
@@ -3514,10 +3603,6 @@ h6 {
   .xl\:rounded-r-none {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-  }
-
-  .xl\:rounded-bl-\[290px\] {
-    border-bottom-left-radius: 290px;
   }
 
   .xl\:border-r-2 {
