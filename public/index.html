@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Fernanda Campos - Dermatologia Avançada</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="output.css">
+
+    <!-- ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css" rel="stylesheet">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+</head>
+
+<body class="bg-gray-100">
+    <header class="sticky top-0 h-[90px] shadow-xl z-30 bg-white">
+        <div class="container mx-auto h-full">
+            <div class="flex items-center justify-between h-full">
+                <!-- TOGGLE MOBILE -->
+                <div class="cursor-pointer lg:hidden" id="nav-trigger-btn">
+                    <i class="text-4xl ri-menu-4-line text-primary"></i>
+                </div>
+                <!-- NAME MOBILE -->
+                <span class="lg:hidden text-primary font-bold ml-2">Dra. Fernanda</span>
+                <!-- LOGO DESKTOP -->
+                <a href="#hero" class="hidden xl:block">
+                    <img src="assets/logos/logo.png" alt="Logotipo Dra. Fernanda Campos" class="w-[120px] h-auto">
+                </a>
+                <!-- NAV DESKTOP -->
+                <nav class="hidden lg:flex">
+                    <ul class="flex gap-8" id="nav_menu_desktop">
+                        <li><a href="#hero" class="hover:text-custom">Home</a></li>
+                        <li><a href="#symptoms" class="hover:text-custom">Sintomas</a></li>
+                        <li><a href="#about-doctor" class="hover:text-custom">Sobre</a></li>
+                        <li><a href="#contact" class="hover:text-custom">Contato</a></li>
+                    </ul>
+                </nav>
+                <!-- SOCIAL DESKTOP -->
+                <div class="hidden lg:flex items-center gap-2">
+                    <a href="https://wa.me/5511983011327" target="_blank" class="flex items-center"
+                        aria-label="WhatsApp">
+                        <i class="ri-whatsapp-line text-primary text-2xl hover:text-custom"></i>
+                    </a>
+                    <a href="https://www.instagram.com/drafernandacamposdermato/" target="_blank"
+                        class="flex items-center ml-1" aria-label="Instagram">
+                        <i class="ri-instagram-fill text-primary text-2xl hover:text-custom"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- NAV MOBILE -->
+            <nav class="lg:hidden">
+                <ul class="fixed w-full h-0 p-0 bg-white overflow-hidden border-t 
+                    top-[90px] left-0 right-0 flex flex-col gap-4 transition-all duration-300" id="nav_menu">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#symptoms">Sintomas</a></li>
+                    <li><a href="#about-doctor">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <!-- SOCIAL MOBILE -->
+                    <li class="mt-4 flex justify-center">
+                        <a href="https://www.instagram.com/drafernandacamposdermato/" target="_blank">
+                            <i class="ri-instagram-fill text-primary text-2xl hover:text-custom"></i>
+                        </a>
+                        <a href="https://wa.me/5511983011327" target="_blank" class="ml-6">
+                            <i class="ri-whatsapp-line text-primary text-2xl hover:text-custom"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE WRAPPER -->
+    <main class="max-w-[1920px] mx-auto bg-white overflow-hidden">
+        <!-- GRID IMG -->
+        <div class="fixed top-0 bottom-0 left-0 right-0 z-10 xl:bg-grid xl:bg-center xl:bg-repeat-y"></div>
+
+        <!-- ========================= -->
+        <!--        1. HOME / HERO     -->
+        <!-- ========================= -->
+        <section id="hero"
+            class="hero relative z-20 h-[540px] lg:h-[720px] xl:h-[760px] bg-hero bg-no-repeat bg-fixed xl:rounded-bl-[290px]">
+            <div class="container mx-auto h-full flex items-center justify-center lg:justify-start px-6 lg:px-0">
+                <div
+                    class="hero__text relative z-40 max-w-[450px] lg:max-w-[560px] flex flex-col items-center lg:items-start text-center lg:text-left bg-white/80 lg:bg-transparent backdrop-blur-sm lg:backdrop-blur-none rounded-2xl lg:rounded-none p-8 lg:p-0 mx-auto lg:mx-0">
+                    <h1 class="mb-6 mt-0 text-[38px] lg:text-[72px] leading-tight font-primary text-primary">
+                        Dermatologia Avançada na Zona Sul de São Paulo
+                    </h1>
+                    <p class="mb-8 text-[20px] lg:text-[22px] text-secondary">
+                        Beleza natural e resultados personalizados com a Dra. Fernanda Campos.
+                    </p>
+                    <a href="#contact"
+                        class="btn btn-primary inline-flex items-center -mt-12 lg:-mt-14 mb-0 gap-2 relative z-50">
+                        Agendar consulta
+                        <i class="ri-arrow-right-line text-custom text-[24px]"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================= -->
+        <!--   2. INTRODUÇÃO (#intro)  -->
+        <!-- ========================= -->
+        <section id="intro"
+            class="about p-12 relative z-30 mt-10 sm:mt-10 lg:-mt-[80px] xl:-mt-[100px] pt-6 lg:pt-6 bg-accent-secondary text-white">
+            <div class="container mx-auto xl:px-0">
+                <div
+                    class="flex flex-col text-center xl:text-left xl:flex-row justify-between items-stretch gap-8 xl:gap-[74px]">
+                    <!-- TEXT -->
+                    <div
+                        class="about__text flex-1 order-2 xl:order-2 max-w-2xl xl:max-w-[1140px] flex flex-col items-center xl:items-start gap-6 lg:gap-8 lg:min-h-[360px] xl:min-h-[453px] xl:justify-between text-white">
+                        <h2 class="h2">
+                            Porque cada mulher merece se olhar no espelho e se reconhecer
+                        </h2>
+                        <p class="text-secondary text-[16px] lg:text-[18px] leading-relaxed">
+                            Aos 40, 50 anos, muitas mulheres sentem que sua imagem não reflete a vitalidade que
+                            carregam por dentro. Rugas, flacidez, manchas, queda de firmeza no rosto e no corpo podem
+                            mexer diretamente com a autoestima.
+                        </p>
+                        <p class="text-secondary text-[16px] lg:text-[18px] leading-relaxed">
+                            A Dra. Fernanda Campos entende esse momento da vida feminina porque dedica sua carreira a
+                            cuidar da beleza de forma equilibrada e natural. Nada de exageros, nada de padronizações.
+                            Cada paciente é única e cada tratamento é pensado de forma individualizada.
+                        </p>
+                        <p class="text-secondary text-[16px] lg:text-[18px] leading-relaxed">
+                            O compromisso é realçar a beleza que já existe, com recursos modernos e resultados que
+                            respeitam a sua história.
+                        </p>
+                        <!-- BTN -->
+                        <a href="#services" class="btn btn-primary">
+                            Quero conhecer os tratamentos
+                            <i class="ri-arrow-right-line text-custom"></i>
+                        </a>
+                    </div>
+                    <!-- IMG -->
+                    <div class="about__img order-1 xl:order-1 max-w-[553px] mx-auto xl:max-w-none xl:mx-0 lg:mt-10">
+                        <!-- wrapper para garantir cortes e overflow -->
+                        <div
+                            class="overflow-hidden rounded-lg xl:rounded-l-2xl xl:rounded-r-none h-[260px] lg:h-[360px] xl:h-[453px]">
+                            <img src="assets/about/section2.jpg" alt="Ambiente do consultório"
+                                class="w-full h-full object-cover block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- 3. SINTOMAS (#symptoms)   -->
+        <!-- ========================= -->
+        <section id="symptoms" class="steps mt-[80px] xl:mt-[200px] relative z-20">
+            <div class="container mx-auto">
+                <div class="mb-12 text-center max-w-3xl mx-auto">
+                    <h2 class="h2 mb-4">Os sinais que mais incomodam têm solução</h2>
+                    <p>
+                        Quando o espelho não reflete como você se sente por dentro, é sinal de que algo pode ser
+                        cuidado com mais atenção. Mudanças na pele e no corpo são comuns, mas não precisam ser motivo
+                        de insegurança.
+                    </p>
+                </div>
+
+                <!-- GRID ITEMS -->
+                <div class="grid grid-cols-1 gap-12 xl:grid-cols-3">
+                    <!-- CARD 1 -->
+                    <div class="text-center steps__step">
+                        <div class="mb-4">
+                            <i class="text-5xl ri-emotion-normal-line text-custom"></i>
+                        </div>
+                        <h3 class="mb-5 h3">Rugas, marcas e olheiras</h3>
+                        <p class="max-w-md mx-auto mb-5">
+                            Rugas e marcas de expressão que parecem mais evidentes, olheiras e cicatrizes que
+                            atrapalham a harmonia do rosto.
+                        </p>
+                        <a href="#services" class="flex justify-center gap-2 font-medium">
+                            Descubra o tratamento ideal
+                            <i class="ri-arrow-right-line text-custom"></i>
+                        </a>
+                    </div>
+                    <!-- CARD 2 -->
+                    <div class="text-center steps__step">
+                        <div class="mb-4">
+                            <i class="text-5xl ri-body-scan-line text-custom"></i>
+                        </div>
+                        <h3 class="mb-5 h3">Flacidez e contorno</h3>
+                        <p class="max-w-md mx-auto mb-5">
+                            Flacidez no rosto ou no corpo que altera os contornos e muda a forma como você se vê no
+                            espelho.
+                        </p>
+                        <a href="#services" class="flex justify-center gap-2 font-medium">
+                            Ver opções de tratamento
+                            <i class="ri-arrow-right-line text-custom"></i>
+                        </a>
+                    </div>
+                    <!-- CARD 3 -->
+                    <div class="text-center steps__step">
+                        <div class="mb-4">
+                            <i class="text-5xl ri-blur-off-line text-custom"></i>
+                        </div>
+                        <h3 class="mb-5 h3">Manchas, rosácea e textura</h3>
+                        <p class="max-w-md mx-auto mb-5">
+                            Manchas, sinais do tempo, rosácea, cicatrizes e textura irregular da pele que tiram a
+                            uniformidade e a luminosidade.
+                        </p>
+                        <a href="#services" class="flex justify-center gap-2 font-medium">
+                            Tratar com tecnologia de ponta
+                            <i class="ri-arrow-right-line text-custom"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- moved paragraph and CTA into gallery section per request -->
+            </div>
+        </section>
+        <!-- ========================= -->
+        <!-- 3.1.5 VIDEO FEATURE (#video-feature) -->
+        <!-- ========================= -->
+        <section id="video-feature"
+            class="video-feature mt-[40px] xl:mt-[80px] relative z-20 pt-6 bg-white text-primary">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col xl:flex-row items-center bg-white rounded-[30px] p-6 xl:p-12 gap-8">
+
+                    <!-- VIDEO -->
+                    <div class="w-full xl:w-1/2">
+                        <div class="relative overflow-hidden rounded-[20px] shadow-xl">
+
+                            <video id="video-1" class="site-video w-full h-auto block" preload="none" playsinline
+                                aria-label="Vídeo sobre cuidados com a pele">
+                                <source
+                                    src="https://res.cloudinary.com/dycmgv0ci/video/upload/v1763760820/pele-perfeita_prptvt.mp4"
+                                    type="video/mp4">
+                                Seu navegador não suporta vídeo HTML5.
+                            </video>
+
+                            <button id="video-play-btn-1" aria-label="Reproduzir vídeo"
+                                class="site-video-play-btn absolute inset-0 m-auto w-[96px] h-[96px] bg-accent hover:bg-accent-hover text-white rounded-full flex items-center justify-center shadow-lg transition-transform duration-200">
+                                <i class="ri-play-line text-4xl"></i>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- TEXT -->
+                    <div class="w-full xl:w-1/2 text-left">
+                        <h2 class="h2 mb-4">O segredo de uma pele bonita</h2>
+
+                        <p class="text-[16px] lg:text-[18px] text-secondary leading-relaxed mb-4">
+                            Qual a primeira imagem que passa na sua cabeça quando você pensa no botox? Aquele rosto
+                            paralisado, aquele rosto travado? Isso caiu por terra faz tempo. Hoje a gente pode ter uma
+                            mímica facial, levantar a sobrancelha e ter muita qualidade de pele. Uma coisa que sempre
+                            digo é:
+                            melhor prevenir do que corrigir.
+                        </p>
+
+                        <p class="text-[16px] lg:text-[18px] text-secondary leading-relaxed mb-4">
+                            O segredo de uma pele bonita aos 40, 50 ou 60 anos está na constância. Cuidar da pele todos
+                            os dias,
+                            mesmo que por apenas um minuto, faz uma diferença real ao longo dos anos.
+                        </p>
+
+                        <p class="text-[16px] lg:text-[18px] text-secondary leading-relaxed mb-4">
+                            Lavar, tonificar, hidratar, proteger e, quando fizer sentido, maquiar: cada pequena etapa
+                            contribui
+                            para manter a saúde, o viço e a naturalidade da sua pele.
+                        </p>
+
+                        <p class="text-[16px] lg:text-[18px] text-secondary leading-relaxed mb-4">
+                            O processo de envelhecimento é contínuo, e o cuidado também precisa ser. É essa rotina
+                            diária que
+                            ensinará sua pele a responder melhor com o passar do tempo.
+                        </p>
+
+                        <p class="text-[16px] lg:text-[18px] text-secondary leading-relaxed mb-4">
+                            Se isso fez sentido para você, podemos traçar um plano personalizado, pensado exclusivamente
+                            para as
+                            necessidades da sua pele.
+                        </p>
+
+                        <a href="#contact" class="btn btn-primary inline-flex items-center gap-2 mt-2">
+                            Agende avaliação
+                            <i class="ri-arrow-right-line text-custom"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- GALERIA DE PROCEDIMENTOS -->
+        <!-- ========================= -->
+        <section id="procedures-gallery"
+            class="testimonial mt-[80px] xl:mt-[200px] relative z-20 bg-accent-secondary text-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col items-center pt-[88px] pb-[40px]">
+                    <!-- Intro text moved from #symptoms; larger on desktop -->
+                    <div class="text-center max-w-3xl mx-auto mb-8 px-4">
+                        <p class="text-secondary font-medium text-[18px] lg:text-[22px] leading-relaxed">
+                            Essas preocupações têm solução quando tratadas com cuidado, conhecimento e tecnologia de
+                            ponta.
+                        </p>
+                    </div>
+                    <!-- SLIDER (fotos only) -->
+                    <div class="w-full">
+                        <div class="testimonial__slider swiper h-[400px]">
+                            <div class="swiper-wrapper">
+                                <!-- SLIDE 1 -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="w-full testimonial__item max-w-[450px] h-[300px] rounded-[30px] overflow-hidden flex justify-center items-center mx-auto">
+                                        <img src="assets/procedures/01.jpg" alt="Procedimento 1"
+                                            class="w-full h-full object-cover rounded-md">
+                                    </div>
+                                </div>
+                                <!-- SLIDE 2 -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="w-full testimonial__item max-w-[450px] h-[300px] rounded-[30px] overflow-hidden flex justify-center items-center mx-auto">
+                                        <img src="assets/procedures/02.jpg" alt="Procedimento 2"
+                                            class="w-full h-full object-cover rounded-md">
+                                    </div>
+                                </div>
+                                <!-- SLIDE 3 -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="w-full testimonial__item max-w-[450px] h-[300px] rounded-[30px] overflow-hidden flex justify-center items-center mx-auto">
+                                        <img src="assets/procedures/03.jpg" alt="Procedimento 3"
+                                            class="w-full h-full object-cover rounded-md">
+                                    </div>
+                                </div>
+                                <!-- SLIDE 5 -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="w-full testimonial__item max-w-[450px] h-[300px] rounded-[30px] overflow-hidden flex justify-center items-center mx-auto">
+                                        <img src="assets/procedures/05.jpeg" alt="Procedimento 5"
+                                            class="w-full h-full object-cover rounded-lg block">
+                                    </div>
+                                </div>
+                                <!-- SLIDE 7 -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="w-full testimonial__item max-w-[450px] h-[300px] rounded-[30px] overflow-hidden flex justify-center items-center mx-auto">
+                                        <img src="assets/procedures/07.jpeg" alt="Procedimento 7"
+                                            class="w-full h-full object-cover rounded-lg block">
+                                    </div>
+                                </div>
+                                <!-- SLIDE 8 -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="w-full testimonial__item max-w-[450px] h-[300px] rounded-[30px] overflow-hidden flex justify-center items-center mx-auto">
+                                        <img src="assets/procedures/08.jpeg" alt="Procedimento 8"
+                                            class="w-full h-full object-cover rounded-lg block">
+                                    </div>
+                                </div>
+                                <!-- SLIDE 9 -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="w-full testimonial__item max-w-[450px] h-[300px] rounded-[30px] overflow-hidden flex justify-center items-center mx-auto">
+                                        <img src="assets/procedures/09.jpeg" alt="Procedimento 9"
+                                            class="w-full h-full object-cover rounded-lg block">
+                                    </div>
+                                </div>
+                                <!-- SLIDE 10 -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="w-full testimonial__item max-w-[450px] h-[300px] rounded-[30px] overflow-hidden flex justify-center items-center mx-auto">
+                                        <img src="assets/procedures/10.jpeg" alt="Procedimento 10"
+                                            class="w-full h-full object-cover rounded-lg block">
+                                    </div>
+                                </div>
+                                <!-- SLIDE 11 -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="w-full testimonial__item max-w-[450px] h-[300px] rounded-[30px] overflow-hidden flex justify-center items-center mx-auto">
+                                        <img src="assets/procedures/11.jpeg" alt="Procedimento 11"
+                                            class="w-full h-full object-cover rounded-lg block">
+                                    </div>
+                                </div>
+                                <!-- SLIDE 12 -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="w-full testimonial__item max-w-[450px] h-[300px] rounded-[30px] overflow-hidden flex justify-center items-center mx-auto">
+                                        <img src="assets/procedures/12.jpeg" alt="Procedimento 12"
+                                            class="w-full h-full object-cover rounded-lg block">
+                                    </div>
+                                </div>
+                                <!-- SLIDE 13 -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="w-full testimonial__item max-w-[450px] h-[300px] rounded-[30px] overflow-hidden flex justify-center items-center mx-auto">
+                                        <img src="assets/procedures/13.jpeg" alt="Procedimento 13"
+                                            class="w-full h-full object-cover rounded-lg block">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Swiper Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <!-- CTA below photos -->
+                    <div class="mt-6 text-center">
+                        <a href="#services" class="btn btn-primary inline-flex items-center gap-2">
+                            Descubra o tratamento ideal para você
+                            <i class="ri-arrow-right-line text-custom"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+
+        <!-- ========================= -->
+        <!-- 3.5 VIDEO FEATURE (#video-feature) -->
+        <!-- ========================= -->
+        <section id="video-feature"
+            class="video-feature mt-[40px] xl:mt-[80px] relative z-20 pt-6 bg-white text-primary">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col xl:flex-row items-center bg-white rounded-[30px] p-6 xl:p-12 gap-8">
+
+                    <!-- VIDEO -->
+                    <div class="w-full xl:w-1/2">
+                        <div class="relative overflow-hidden rounded-[20px] shadow-xl">
+
+                            <video id="video-2" class="site-video w-full h-auto block" preload="none" playsinline
+                                aria-label="Vídeo sobre toxina botulínica">
+                                <source
+                                    src="https://res.cloudinary.com/dycmgv0ci/video/upload/v1763760838/botox_hiegu6.mp4"
+                                    type="video/mp4">
+                                Seu navegador não suporta vídeo HTML5.
+                            </video>
+
+                            <button id="video-play-btn-2" aria-label="Reproduzir vídeo"
+                                class="site-video-play-btn absolute inset-0 m-auto w-[96px] h-[96px] bg-accent hover:bg-accent-hover text-white rounded-full flex items-center justify-center shadow-lg transition-transform duration-200">
+                                <i class="ri-play-line text-4xl"></i>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- TEXT -->
+                    <div class="w-full xl:w-1/2 text-left">
+                        <h2 class="h2 mb-4">O botox não é sobre mudar</h2>
+                        <p class="text-[16px] lg:text-[18px] text-secondary leading-relaxed mb-4">
+                            Qual a primeira imagem que passa na sua cabeça quando você pensa no botox? Aquele rosto
+                            paralisado, aquele rosto travado — isso caiu por terra faz tempo. Hoje a gente pode ter uma
+                            mímica facial, levantar a sobrancelha e ter muita qualidade de pele. Uma coisa que sempre
+                            falo é: melhor prevenir do que corrigir.
+                        </p>
+                        <a href="#contact" class="btn btn-primary inline-flex items-center gap-2 mt-2">Agende avaliação
+                            <i class="ri-arrow-right-line text-custom"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- 4. ATENDIMENTO (#services)-->
+        <!-- ========================= -->
+        <section id="services" class="work mt-12 xl:mt-[150px] p-12 relative z-20 bg-accent-secondary text-primary">
+            <div class="container mx-auto xl:px-0">
+                <!-- TEXT -->
+                <div class="mb-24 text-center max-w-3xl mx-auto">
+                    <h2 class="mb-4 h2 work__title">
+                        Tecnologia e conhecimento médico para transformar a sua pele e o seu corpo
+                    </h2>
+                    <p class="work__subtitle">
+                        Tratamentos modernos, seguros e personalizados, pensados para mulheres que desejam resultados
+                        naturais, sem exageros.
+                    </p>
+                </div>
+                <!-- GRID -->
+                <div class="grid grid-cols-1 gap-x-[104px] gap-y-[56px] work__grid xl:grid-cols-2">
+                    <!-- Ultrassom Microfocado -->
+                    <div class="w-full m-w-[548px] h-full mx-auto">
+                        <img class="mb-6" src="assets/work/01.jpg" alt="Ultrassom Microfocado">
+                        <div class="flex items-center justify-between w-full">
+                            <div>
+                                <h3 class="h3">Ultrassom Microfocado (ATRIA 2)</h3>
+                                <p>
+                                    Indicado para flacidez facial e corporal, promove firmeza, definição e
+                                    rejuvenescimento sem cortes. Efeito lifting natural, com resultados progressivos e
+                                    duradouros.
+                                </p>
+                                <a href="#contact" class="inline-flex items-center gap-2 mt-3 font-medium text-primary">
+                                    Agendar avaliação para Ultrassom
+                                    <i class="ri-arrow-right-line text-custom"></i>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- Toxina Botulínica -->
+                    <div class="w-full m-w-[548px] h-full mx-auto">
+                        <img class="mb-6" src="assets/work/02.jpg" alt="Toxina Botulínica">
+                        <div class="flex items-center justify-between w-full">
+                            <div>
+                                <h3 class="h3">Toxina Botulínica</h3>
+                                <p>
+                                    Suaviza linhas de expressão preservando a identidade facial. Tratamento rápido,
+                                    seguro e com aparência mais descansada, leve e harmônica.
+                                </p>
+                                <a href="#contact" class="inline-flex items-center gap-2 mt-3 font-medium text-primary">
+                                    Agendar avaliação para Toxina Botulínica
+                                    <i class="ri-arrow-right-line text-custom"></i>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- Laser Facial -->
+                    <div class="w-full m-w-[548px] h-full mx-auto">
+                        <img class="mb-6" src="assets/work/03.jpg" alt="Laser Facial Plataforma Solon">
+                        <div class="flex items-center justify-between w-full">
+                            <div>
+                                <h3 class="h3">Laser Facial – Plataforma Solon</h3>
+                                <p>
+                                    Trata manchas, cicatrizes de acne, rosácea, olheiras e sinais de envelhecimento.
+                                    Melhora textura e devolve luminosidade e frescor à pele.
+                                </p>
+                                <a href="#contact" class="inline-flex items-center gap-2 mt-3 font-medium text-primary">
+                                    Agendar avaliação para Laser Facial
+                                    <i class="ri-arrow-right-line text-custom"></i>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- Outros Procedimentos -->
+                    <div class="w-full m-w-[548px] h-full mx-auto">
+                        <img class="mb-6" src="assets/work/04.jpg" alt="Outros procedimentos">
+                        <div class="flex items-center justify-between w-full">
+                            <div>
+                                <h3 class="h3">Outros procedimentos</h3>
+                                <p>
+                                    • Preenchimento com Ácido Hialurônico<br>
+                                    • Bioestimuladores de Colágeno<br>
+                                    • Fios de PDO (lisos e de tração)<br>
+                                    • Depilação a Laser
+                                </p>
+                                <a href="#contact" class="inline-flex items-center gap-2 mt-3 font-medium text-primary">
+                                    Agende uma avaliação
+                                    <i class="ri-arrow-right-line text-custom"></i>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXTRA -->
+        <section id="extra" class="mt-[40px] mb-[40px] relative z-20">
+            <div class="container mx-auto bg-white rounded-[40px] px-4 py-8">
+                <h2 class="text-center mb-4 h2">Mais conteúdos e bastidores</h2>
+                <div class="swiper extra_slider h-[260px]">
+                    <div class="swiper-wrapper">
+                        <!-- EXTRA 1 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="w-full max-w-[450px] h-[240px] bg-white rounded-[20px] flex items-center justify-center p-4 mx-auto text-center">
+                                <p class="text-base">
+                                    Conteúdos de bastidores, orientações e dicas de cuidados com a pele.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- EXTRA 2 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="w-full max-w-[450px] h-[240px] bg-white rounded-[20px] flex items-center justify-center p-4 mx-auto text-center">
+                                <p class="text-base">
+                                    Explicações sobre procedimentos e tecnologias utilizadas no consultório.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- EXTRA 3 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="w-full max-w-[450px] h-[240px] bg-white rounded-[20px] flex items-center justify-center p-4 mx-auto text-center">
+                                <p class="text-base">
+                                    Histórias inspiradoras de pacientes que resgataram a autoestima.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PAGINAÇÃO -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- 6. DIFERENCIAIS (#differentials) -->
+        <!-- ========================= -->
+        <section id="differentials"
+            class="stats mt-[80px] xl:mt-[150px] relative z-20 pt-6 bg-accent-secondary py-[80px] xl-py-[150px] text-primary">
+            <div class="container mx-auto">
+                <div class="mb-12 text-center max-w-3xl mx-auto">
+                    <h2 class="h2 mb-4">Por que escolher a Dra. Fernanda?</h2>
+                    <p>
+                        Cuidar da pele e da beleza vai além da técnica: envolve confiança, acolhimento e sensibilidade.
+                    </p>
+                </div>
+                <!-- GRID -->
+                <div class="grid grid-cols-1 gap-12 xl:grid-cols-4">
+                    <!-- ITEM 1-->
+                    <div class="text-center stats__item xl:border-r-2 xl:border-accent">
+                        <h3 class="h3 font-primary text-custom">
+                            Formação sólida
+                        </h3>
+                        <p>
+                            Médica dermatologista com especialização reconhecida e experiência prática em consultório
+                            particular.
+                        </p>
+                    </div>
+                    <!-- ITEM 2-->
+                    <div class="text-center stat__item xl:border-r-2 xl:border-accent">
+                        <h3 class="h3 font-primary text-custom">
+                            Atendimento individualizado
+                        </h3>
+                        <p>
+                            Cada paciente é tratada de forma única, sem padronizações ou exageros, respeitando sua
+                            história e singularidade.
+                        </p>
+                    </div>
+                    <!-- ITEM 3-->
+                    <div class="text-center stat__item xl:border-r-2 xl:border-accent">
+                        <h3 class="h3 font-primary text-custom">
+                            Tecnologias de ponta
+                        </h3>
+                        <p>
+                            Equipamentos modernos como Ultrassom Microfocado (ATRIA 2) e plataforma de Laser Solon
+                            garantem eficácia e segurança.
+                        </p>
+                    </div>
+                    <!-- ITEM 4-->
+                    <div class="text-center stat__item">
+                        <h3 class="h3 font-primary text-custom">
+                            Olhar humano e empático
+                        </h3>
+                        <p>
+                            Respeito às características individuais, valorizando a beleza natural em cada pessoa, sem
+                            excessos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- 5. SOBRE A DRA (#about-doctor) -->
+        <!-- ========================= -->
+        <section id="about-doctor" class="about mt-[80px] xl:mt-[150px] relative z-20 pt-6">
+            <div class="container mx-auto xl:px-0">
+                <div
+                    class="flex flex-col text-center xl:text-left xl:flex-row justify-between items-start xl:items-center gap-8 xl:gap-[74px]">
+                    <div
+                        class="about__text flex-1 max-w-xl xl:max-w-[720px] flex flex-col items-center xl:items-start gap-6 mx-auto xl:min-h-[453px] xl:justify-center">
+                        <h2 class="h2">
+                            Uma história guiada pelo cuidado e pela busca da beleza singular
+                        </h2>
+                        <p>
+                            Nascida em Belém do Pará e criada com disciplina em uma escola militar, Fernanda cresceu
+                            cercada pela força e dedicação de sua mãe e avós. Em 1999, ingressou na Faculdade de
+                            Medicina da Universidade Estadual do Pará e, em 2006, mudou-se para São Paulo, onde se
+                            especializou em Dermatologia.
+                        </p>
+                        <p>
+                            Trazendo para sua prática clínica valores de cuidado, atenção e respeito às particularidades
+                            de cada paciente, a Dra. Fernanda atua desde 2021 em seu consultório particular, unindo
+                            tecnologia, conhecimento científico e sensibilidade para oferecer tratamentos que realçam a
+                            beleza individual.
+                        </p>
+                        <p>
+                            Além da exímia capacidade técnica, tem também como diferencial a sua maneira única de
+                            enxergar cada pessoa: sempre com empatia, sem excessos e com resultados naturais.
+                        </p>
+                        <a href="#contact" class="btn btn-primary">
+                            Agende sua consulta com a Dra. Fernanda
+                            <i class="ri-arrow-right-line text-custom"></i>
+                        </a>
+                    </div>
+                    <!-- IMG for about-doctor -->
+                    <div class="about__img max-w-[450px] mx-auto xl:mx-0">
+                        <div class="overflow-hidden rounded-lg h-[260px] lg:h-[360px] xl:h-[453px]">
+                            <img src="assets/about/sobre.jpg" alt="Sobre a Dra. Fernanda"
+                                class="w-full h-full object-cover block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- 7. FAQ (#faq)             -->
+        <!-- ========================= -->
+        <section id="faq"
+            class="news mt-[80px] xl:mt-[150px] relative z-20 pt-6 pb-[24px] bg-accent-secondary text-white">
+            <div class="container px-0 mx-auto">
+                <div class="max-w-[810px] mx-auto mb-[32px] text-center">
+                    <h2 class="mb-3 h2 news__title">Perguntas Frequentes</h2>
+                    <p class="news__subtitle text-secondary">
+                        Algumas das dúvidas mais comuns das pacientes sobre os procedimentos e cuidados com a pele.
+                    </p>
+                </div>
+
+                <div class="max-w-[810px] mx-auto flex flex-col divide-y divide-primary/10 text-left px-6">
+                    <!-- ITEM 1 -->
+                    <div class="faq-item py-0 overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex items-center justify-between gap-4 p-4 text-left text-[18px] lg:text-[20px] font-medium text-primary">
+                            <span>1. Os procedimentos deixam o rosto artificial?</span>
+                            <i
+                                class="ri-arrow-down-s-line faq-icon text-2xl text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div
+                            class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-4 text-[15px] text-secondary">
+                            <p class="py-3">Não. O objetivo é preservar a naturalidade e a identidade de cada paciente,
+                                valorizando traços individuais e evitando exageros.</p>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 2 -->
+                    <div class="faq-item py-0 overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex items-center justify-between gap-4 p-4 text-left text-[18px] lg:text-[20px] font-medium text-primary">
+                            <span>2. O ultrassom microfocado dói?</span>
+                            <i
+                                class="ri-arrow-down-s-line faq-icon text-2xl text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div
+                            class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-4 text-[15px] text-secondary">
+                            <p class="py-3">O desconforto é mínimo e pode variar de pessoa para pessoa. São utilizados
+                                recursos para tornar o tratamento o mais confortável possível.</p>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 3 -->
+                    <div class="faq-item py-0 overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex items-center justify-between gap-4 p-4 text-left text-[18px] lg:text-[20px] font-medium text-primary">
+                            <span>3. Quanto tempo duram os resultados da toxina botulínica?</span>
+                            <i
+                                class="ri-arrow-down-s-line faq-icon text-2xl text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div
+                            class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-4 text-[15px] text-secondary">
+                            <p class="py-3">Em média de 4 a 6 meses, dependendo do metabolismo de cada paciente e da
+                                área tratada.</p>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 4 -->
+                    <div class="faq-item py-0 overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex items-center justify-between gap-4 p-4 text-left text-[18px] lg:text-[20px] font-medium text-primary">
+                            <span>4. Quais áreas podem ser tratadas com laser facial?</span>
+                            <i
+                                class="ri-arrow-down-s-line faq-icon text-2xl text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div
+                            class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-4 text-[15px] text-secondary">
+                            <p class="py-3">Rosto, pescoço, colo e até mesmo mãos, tratando manchas, cicatrizes,
+                                rosácea, olheiras e sinais de envelhecimento.</p>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 5 -->
+                    <div class="faq-item py-0 overflow-hidden">
+                        <button
+                            class="faq-btn w-full flex items-center justify-between gap-4 p-4 text-left text-[18px] lg:text-[20px] font-medium text-primary">
+                            <span>5. Existe tempo de recuperação após os procedimentos?</span>
+                            <i
+                                class="ri-arrow-down-s-line faq-icon text-2xl text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div
+                            class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-4 text-[15px] text-secondary">
+                            <p class="py-3">Na maioria dos casos, o retorno às atividades é imediato, mas cada técnica
+                                possui recomendações específicas que são explicadas em consulta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- 8. LOCALIZAÇÃO (#location)-->
+        <!-- ========================= -->
+        <section id="location" class="mt-[40px] xl:mt-[100px] relative z-20 pt-6 bg-white text-primary">
+            <div class="container mx-auto xl:px-0">
+                <div class="max-w-[900px] mx-auto text-left">
+                    <h2 class="h2 mb-4">Localização e Agendamento</h2>
+                    <p class="mb-6 text-[17px] leading-relaxed">
+                        Consultas em ambiente acolhedor, moderno e em região nobre na cidade de São Paulo. A Dra.
+                        Fernanda Campos atende com hora marcada, oferecendo atenção integral a cada paciente.
+                    </p>
+
+                    <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 mt-6 text-[17px]">
+                        <div class="flex flex-col gap-2 text-[16px]">
+                            <h3 class="h3">Endereço</h3>
+                            <p class="mb-2">
+                                Rua Baacetava, 191 – Cj 1403<br>
+                                Vila Gertrudes, São Paulo/SP
+                            </p>
+                            <h3 class="h3 mt-2">Contato</h3>
+                            <p class="mb-2">WhatsApp: <a href="https://wa.me/5511983011327" target="_blank"
+                                    class="text-primary underline"><strong>(11) 98301-1327</strong></a></p>
+                            <h3 class="h3 mt-2">Instagram</h3>
+                            <p>
+                                <a href="https://www.instagram.com/drafernandacamposdermato/" target="_blank"
+                                    class="text-primary underline">@drafernandacamposdermato</a>
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-2 text-[16px]">
+                            <h3 class="h3">Horários de atendimento</h3>
+                            <p>Segunda-feira: 13h às 17h</p>
+                            <p>Terça-feira: 8h às 16h</p>
+                            <p>Quarta-feira: 8h às 12h</p>
+                            <p>Sexta-feira: 13h às 17h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- 9. ÚLTIMA CHAMADA (#contact) -->
+        <!-- ========================= -->
+        <section id="contact" class="contact mt-[80px] xl:mt-[150px] relative z-20 bg-accent-secondary text-white">
+            <div class="contact_container container mx-auto sm:rounded-[70px] bg-transparent py-[80px]">
+                <div class="contact__text mx-w-[640px] mx-auto text-center text-white">
+                    <h2 class="mb-4 text-primary h2">
+                        Sua melhor versão já está em você, faça-a aflorar!
+                    </h2>
+                    <p class="max-w-sm mx-auto mb-8 text-secondary xl:max-w-none">
+                        A Dra. Fernanda Campos acredita que a verdadeira beleza está em cada detalhe único que compõe
+                        quem você é. Com cuidado, técnica e tecnologia de ponta, ela ajuda mulheres a recuperarem a
+                        confiança e a leveza de se olhar no espelho com satisfação.
+                    </p>
+                    <a href="#location" class="mx-auto w-full max-w-[420px] flex items-center justify-center gap-2 btn btn-primary" style="height:56px;">
+                        Agende sua consulta agora
+                        <i class="ri-arrow-right-line text-custom"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer mt-[80px] xl:mt-[150px] relative z-20 bg-white">
+            <div class="container px-0 mx-auto">
+                <div class="flex flex-col xl:flex-row xl:gap-[100px] xl:mb-[150px]">
+                    <div class="w-full footer__item max-w-[400px] mb-8 text-center xl:text-left mx-auto">
+                        <!-- logo -->
+                        <a class="flex justify-center mb-8 xl:justify-start" href="#hero">
+                            <img src="assets/logos/logo-completo.png" alt="Logotipo Dra. Fernanda Campos"
+                                class="w-[100px] md:w-[120px] h-auto">
+                        </a>
+                        <p class="mb-8 text-xl">
+                            Dermatologia avançada com foco em resultados naturais e respeitosos com a sua história.
+                        </p>
+                        <!-- SOCIAL -->
+                        <ul class="text-primary flex justify-center gap-[54px] mb-8 xl:justify-start">
+                            <li>
+                                <a href=""><i class="ri-facebook-fill"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="ri-twitter-fill"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="ri-linkedin-fill"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/drafernandacamposdermato/" target="_blank">
+                                    <i class="ri-instagram-fill"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="flex flex-col flex-1 gap-12 text-center xl:flex-row xl:text-left xl:gap-[100px] xl:justify-end">
+                        <div class="footer__item">
+                            <h3 class="mb-3 h3">Páginas</h3>
+                            <ul class="flex flex-col gap-4">
+                                <li><a href="#symptoms" class="hover:text-custom">Sintomas</a></li>
+                                <li><a href="#services" class="hover:text-custom">Atendimento</a></li>
+                                <li><a href="#about-doctor" class="hover:text-custom">Sobre a Dra.</a></li>
+                                <li><a href="#differentials" class="hover:text-custom">Diferenciais</a></li>
+                                <li><a href="#location" class="hover:text-custom">Localização e Agendamento</a></li>
+                                <li><a href="#contact" class="hover:text-custom">Última Chamada</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__item">
+                            <h3 class="mb-3 h3">Procedimentos</h3>
+                            <ul class="flex flex-col gap-4">
+                                <li><a href="#services" class="hover:text-custom">Ultrassom Microfocado</a></li>
+                                <li><a href="#services" class="hover:text-custom">Toxina Botulínica</a></li>
+                                <li><a href="#services" class="hover:text-custom">Laser Facial</a></li>
+                                <li><a href="#services" class="hover:text-custom">Outros procedimentos</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__item max-w-[260px] mx-auto xl:mx-0">
+                            <h3 class="mb-3 h3">Contato</h3>
+                            <div class="flex flex-col gap-6 text-[20px]">
+                                <p>Rua Baacetava, 191 – Cj 1403. Vila Gertrudes, São Paulo/SP</p>
+                                <p>WhatsApp: (11) 98301-1327</p>
+                                <p>Instagram: @drafernandacamposdermato</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- COPYRIGHT -->
+            <p class="py-10 text-lg text-center bg-white footer__copyright xl:border-t">
+                Copyright &copy; Dra. Fernanda Campos 2025. Todos os direitos reservados.
+            </p>
+        </footer>
+    </main>
+
+    <!-- SCROLL REVEAL JS -->
+    <script src="js/scrollreveal.min.js"></script>
+    <!-- SWIPER -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- MAIN JS -->
+    <script src="js/main.js"></script>
+
+    <script>
+        // FAQ accordion: closed by default, open one at a time
+        (function () {
+            const btns = document.querySelectorAll('.faq-btn');
+            if (!btns.length) return;
+
+            btns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const item = btn.closest('.faq-item');
+                    const content = item.querySelector('.faq-content');
+                    const icon = btn.querySelector('.faq-icon');
+                    const isOpen = item.classList.contains('open');
+
+                    // close others
+                    document.querySelectorAll('.faq-item.open').forEach(i => {
+                        if (i !== item) {
+                            i.classList.remove('open');
+                            const c = i.querySelector('.faq-content');
+                            if (c) c.style.maxHeight = null;
+                            const ic = i.querySelector('.faq-icon');
+                            if (ic) ic.style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    if (!isOpen) {
+                        item.classList.add('open');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        if (icon) icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        item.classList.remove('open');
+                        content.style.maxHeight = null;
+                        if (icon) icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // keyboard accessibility
+                btn.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        btn.click();
+                    }
+                });
+            });
+        })();
+    </script>
+
+    <!-- floating WhatsApp button removed -->
+</body>
+
+</html>

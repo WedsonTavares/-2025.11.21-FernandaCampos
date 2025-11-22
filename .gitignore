@@ -1,44 +1,27 @@
+# Node
 node_modules/
-output.css
-index.html
-.env
 npm-debug.log*
-.vscode/
-.idea/
+
+# System files
 .DS_Store
 Thumbs.db
 
-# Tailwind / build artifacts
+# IDE folders
+.vscode/
+.idea/
+
+# Tailwind artifacts
 *.css.map
 
 # Temp files
 *.tmp
 *.swp
 
-# Ignore local large media (keep videos in external CDN/Cloudinary)
+# Ignore local large media (keep videos in CDN)
 assets/videos/
 *.mp4
 *.mov
 *.avi
-node_modules/
-output.css
-index.html
+
+# Env
 .env
-npm-debug.log*
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-
-# Tailwind / build artifacts
-*.css.map
-
-# Temp files
-*.tmp
-*.swp
- 
-# Ignore local large media (keep videos in external CDN/Cloudinary)
-assets/videos/
-*.mp4
-*.mov
-*.avi
