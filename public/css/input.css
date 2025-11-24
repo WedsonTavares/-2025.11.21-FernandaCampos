@@ -100,21 +100,12 @@ h6 {
     pointer-events: none;
 }
 
-
-#hero .btn-primary,
-#intro .btn-primary {
-    @apply bg-transparent text-primary font-medium px-0 h-auto rounded-none;
-}
-
-#hero .btn-primary:hover,
-#intro .btn-primary:hover {
-    @apply text-custom;
-}
-
+/* GARANTE QUE A SETA DO HERO ESTEJA SEMPRE NA COR CUSTOM */
 #hero .btn-primary i,
-#intro .btn-primary i {
-    @apply text-custom;
+#hero .btn-primary:hover i {
+    color: rgb(213 179 170 / var(--tw-text-opacity, 1)) !important;
 }
+
 
 
 /* TEXTO SEMPRE ACIMA */

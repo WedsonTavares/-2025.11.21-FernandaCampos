@@ -1397,28 +1397,11 @@ h6 {
   pointer-events: none;
 }
 
-#hero .btn-primary,
-#intro .btn-primary {
-  height: auto;
-  border-radius: 0px;
-  background-color: transparent;
-  padding-left: 0px;
-  padding-right: 0px;
-  font-weight: 500;
-  --tw-text-opacity: 1;
-  color: rgb(41 47 54 / var(--tw-text-opacity, 1));
-}
-
-#hero .btn-primary:hover,
-#intro .btn-primary:hover {
-  --tw-text-opacity: 1;
-  color: rgb(213 179 170 / var(--tw-text-opacity, 1));
-}
+/* GARANTE QUE A SETA DO HERO ESTEJA SEMPRE NA COR CUSTOM */
 
 #hero .btn-primary i,
-#intro .btn-primary i {
-  --tw-text-opacity: 1;
-  color: rgb(213 179 170 / var(--tw-text-opacity, 1));
+#hero .btn-primary:hover i {
+  color: rgb(213 179 170 / var(--tw-text-opacity, 1)) !important;
 }
 
 /* TEXTO SEMPRE ACIMA */
