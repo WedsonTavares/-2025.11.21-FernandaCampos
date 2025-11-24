@@ -99,6 +99,10 @@ sr.reveal('.stats__item', {
 sr.reveal('.news__title');
 sr.reveal('.news__subtitle', { delay: 800 });
 
+//location
+sr.reveal('#location h2', { origin: 'left' });
+sr.reveal('#location p', { origin: 'right', delay: 200 });
+
 // contato — match the class used in HTML (`contact_container`)
 sr.reveal('.contact_container');
 sr.reveal('.contact__text', { delay: 800 });
@@ -194,4 +198,37 @@ document.querySelectorAll('.site-video').forEach((video) => {
         });
     });
 })();
+
+// FAQ Accordion
+document.addEventListener('DOMContentLoaded', () => {
+    const faqButtons = document.querySelectorAll('.faq-btn');
+
+    faqButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            const content = faqItem.querySelector('.faq-content');
+            const icon = button.querySelector('.faq-icon');
+
+            // Toggle the content
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+
+            // Close other items
+            faqButtons.forEach(otherButton => {
+                if (otherButton !== button) {
+                    const otherItem = otherButton.parentElement;
+                    const otherContent = otherItem.querySelector('.faq-content');
+                    const otherIcon = otherButton.querySelector('.faq-icon');
+                    otherContent.style.maxHeight = null;
+                    otherIcon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+    });
+});
 

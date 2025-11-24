@@ -661,10 +661,6 @@ video {
   margin-right: auto;
 }
 
-.mb-0 {
-  margin-bottom: 0px;
-}
-
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -745,10 +741,6 @@ video {
   margin-top: 1.5rem;
 }
 
-.mt-\[20px\] {
-  margin-top: 20px;
-}
-
 .mt-\[40px\] {
   margin-top: 40px;
 }
@@ -827,10 +819,6 @@ video {
 
 .w-\[120px\] {
   width: 120px;
-}
-
-.w-\[200px\] {
-  width: 200px;
 }
 
 .w-\[96px\] {
@@ -945,13 +933,10 @@ video {
   gap: 2rem;
 }
 
-.gap-x-\[104px\] {
-  -moz-column-gap: 104px;
-       column-gap: 104px;
-}
-
-.gap-y-\[56px\] {
-  row-gap: 56px;
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]) {
@@ -962,6 +947,10 @@ video {
 
 .divide-primary\/10 > :not([hidden]) ~ :not([hidden]) {
   border-color: rgb(41 47 54 / 0.1);
+}
+
+.self-start {
+  align-self: flex-start;
 }
 
 .overflow-hidden {
@@ -1154,11 +1143,6 @@ video {
   line-height: 1.5rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -1193,10 +1177,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.underline {
-  text-decoration-line: underline;
 }
 
 .shadow {
@@ -1329,8 +1309,6 @@ h6 {
   border-radius: 18px;
   padding-left: 30px;
   padding-right: 30px;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
@@ -1417,6 +1395,32 @@ h6 {
   background-repeat: no-repeat;
   z-index: 5;
   pointer-events: none;
+}
+
+#hero .btn-primary,
+#intro .btn-primary {
+  height: auto;
+  border-radius: 0px;
+  background-color: transparent;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(41 47 54 / var(--tw-text-opacity, 1));
+}
+
+#hero .btn-primary:hover,
+#intro .btn-primary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(213 179 170 / var(--tw-text-opacity, 1));
+}
+
+/* Ícone sempre rosado */
+
+#hero .btn-primary i,
+#intro .btn-primary i {
+  --tw-text-opacity: 1;
+  color: rgb(213 179 170 / var(--tw-text-opacity, 1));
 }
 
 /* TEXTO SEMPRE ACIMA */
@@ -1526,6 +1530,138 @@ html, body {
   }
 }
 
+/* ===================================================== */
+
+/*     🔥 AJUSTES ADICIONADOS DO FOOTER (MODELO PEDIDO)   */
+
+/* ===================================================== */
+
+/* GRID PRINCIPAL DO FOOTER */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 3rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    text-align: left;
+  }
+}
+
+/* Colunas */
+
+.footer__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer__item {
+    align-items: flex-start;
+  }
+}
+
+/* Títulos iguais ao modelo */
+
+.footer .h3,
+.footer-title {
+  margin-bottom: 1rem;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(41 47 54 / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 768px) {
+  .footer .h3,
+.footer-title {
+    font-size: 24px;
+  }
+}
+
+/* Lista */
+
+.footer__item ul > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.footer__item ul li a {
+  --tw-text-opacity: 1;
+  color: rgb(77 80 83 / var(--tw-text-opacity, 1));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.footer__item ul li a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(213 179 170 / var(--tw-text-opacity, 1));
+}
+
+/* Contato */
+
+.footer__item p {
+  line-height: 1.625;
+  --tw-text-opacity: 1;
+  color: rgb(77 80 83 / var(--tw-text-opacity, 1));
+}
+
+/* Logo */
+
+.footer__item img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+@media (min-width: 768px) {
+  .footer__item img {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 230px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer__item img {
+    width: 260px;
+  }
+}
+
+/* COPYRIGHT */
+
+.footer__copyright {
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 18px;
+  --tw-text-opacity: 1;
+  color: rgb(77 80 83 / var(--tw-text-opacity, 1));
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .footer-title {
+    font-size: 18px !important;
+  }
+
+  .footer__item ul li a,
+    .footer__item p {
+    font-size: 16px !important;
+  }
+}
+
 .hover\:bg-accent-hover:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(184 140 93 / var(--tw-bg-opacity, 1));
@@ -1543,12 +1679,6 @@ html, body {
 
   .sm\:rounded-\[70px\] {
     border-radius: 70px;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:w-\[260px\] {
-    width: 260px;
   }
 }
 
@@ -1668,16 +1798,8 @@ html, body {
     margin-right: 0px;
   }
 
-  .xl\:-mt-4 {
-    margin-top: -1rem;
-  }
-
   .xl\:-mt-\[100px\] {
     margin-top: -100px;
-  }
-
-  .xl\:mb-\[150px\] {
-    margin-bottom: 150px;
   }
 
   .xl\:mt-\[100px\] {
@@ -1716,10 +1838,6 @@ html, body {
     width: 50%;
   }
 
-  .xl\:w-\[280px\] {
-    width: 280px;
-  }
-
   .xl\:max-w-\[1140px\] {
     max-width: 1140px;
   }
@@ -1756,10 +1874,6 @@ html, body {
     align-items: center;
   }
 
-  .xl\:justify-start {
-    justify-content: flex-start;
-  }
-
   .xl\:justify-center {
     justify-content: center;
   }
@@ -1768,12 +1882,12 @@ html, body {
     justify-content: space-between;
   }
 
-  .xl\:gap-\[60px\] {
-    gap: 60px;
-  }
-
   .xl\:gap-\[74px\] {
     gap: 74px;
+  }
+
+  .xl\:self-start {
+    align-self: flex-start;
   }
 
   .xl\:rounded-l-2xl {
@@ -1788,10 +1902,6 @@ html, body {
 
   .xl\:border-r-2 {
     border-right-width: 2px;
-  }
-
-  .xl\:border-t {
-    border-top-width: 1px;
   }
 
   .xl\:border-accent {

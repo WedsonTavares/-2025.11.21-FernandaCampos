@@ -36,7 +36,7 @@ h6 {
 }
 
 .btn {
-    @apply h-[75px] px-[30px] transition-all duration-300 text-white rounded-[18px] flex items-center gap-2;
+    @apply h-[75px] px-[30px] transition-all duration-300 rounded-[18px] flex items-center gap-2;
 }
 
 .btn-primary {
@@ -63,7 +63,7 @@ h6 {
 /* WRAPPER QUE OCUPA 100% DA TELA */
 .hero-bg-wrapper {
     width: 100%;
-    background: #f2f6f9; 
+    background: #f2f6f9;
     position: relative;
     z-index: 1;
     display: block;
@@ -100,6 +100,24 @@ h6 {
     pointer-events: none;
 }
 
+
+#hero .btn-primary,
+#intro .btn-primary {
+    @apply bg-transparent text-primary font-medium px-0 h-auto rounded-none;
+}
+
+#hero .btn-primary:hover,
+#intro .btn-primary:hover {
+    @apply text-custom;
+}
+
+/* Ícone sempre rosado */
+#hero .btn-primary i,
+#intro .btn-primary i {
+    @apply text-custom;
+}
+
+
 /* TEXTO SEMPRE ACIMA */
 .hero__text {
     position: relative;
@@ -124,15 +142,11 @@ h6 {
 
 /* MOBILE — imagem atrás do texto*/
 @media (max-width: 768px) {
-  .hero__text {
-      background: transparent !important;
-      backdrop-filter: none !important;
-  }
+    .hero__text {
+        background: transparent !important;
+        backdrop-filter: none !important;
+    }
 }
-
-
-
-
 
 /* Tipografia mobile */
 @media (max-width: 768px) {
@@ -156,7 +170,6 @@ section {
     position: relative;
     z-index: 5;
 }
-
 
 /* 1 — Remove barra branca lateral */
 html, body {
@@ -184,5 +197,61 @@ html, body {
       filter: blur(1.5px) !important;
       background-position: top center !important;
   }
+}
+
+/* ===================================================== */
+/*     🔥 AJUSTES ADICIONADOS DO FOOTER (MODELO PEDIDO)   */
+/* ===================================================== */
+
+/* GRID PRINCIPAL DO FOOTER */
+.footer-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left;
+}
+
+/* Colunas */
+.footer__item {
+    @apply flex flex-col items-center md:items-start;
+}
+
+/* Títulos iguais ao modelo */
+.footer .h3,
+.footer-title {
+    @apply uppercase tracking-wide font-semibold text-[22px] md:text-[24px] mb-4 text-primary;
+}
+
+/* Lista */
+.footer__item ul {
+    @apply space-y-3;
+}
+
+.footer__item ul li a {
+    @apply text-secondary hover:text-custom transition;
+}
+
+/* Contato */
+.footer__item p {
+    @apply text-secondary leading-relaxed;
+}
+
+/* Logo */
+.footer__item img {
+    @apply mx-auto md:mx-0 w-[200px] md:w-[230px] xl:w-[260px];
+}
+
+/* COPYRIGHT */
+.footer__copyright {
+    @apply text-secondary text-center mt-16 text-[18px];
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer-title {
+        font-size: 18px !important;
+    }
+
+    .footer__item ul li a,
+    .footer__item p {
+        font-size: 16px !important;
+    }
 }
 
