@@ -8,7 +8,6 @@ navTriggerBtn.addEventListener("click", () => {
     naVmenu.classList.toggle("nav-is-open");
 });
 
-// Fechar menu ao clicar em qualquer link do menu (mobile) e fazer scroll suave
 const navLinks = naVmenu.querySelectorAll("a");
 navLinks.forEach(link => {
     link.addEventListener("click", (e) => {
@@ -23,10 +22,9 @@ navLinks.forEach(link => {
         naVmenu.classList.remove("nav-is-open");
     });
 });
-//swiper
+
 
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
     loop: true,
     autoplay: {
         delay: 3000,
@@ -36,7 +34,6 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-pagination',
         clickable: true,
     },
-    //breakpoints
     slidesPerView: 3,
     spaceBetween: 20,
     breakpoints: {
@@ -154,4 +151,47 @@ document.querySelectorAll('.site-video').forEach((video) => {
 });
 
 
+// FAQ accordion: closed by default, open one at a time
+(function () {
+    const btns = document.querySelectorAll('.faq-btn');
+    if (!btns.length) return;
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const content = item.querySelector('.faq-content');
+            const icon = btn.querySelector('.faq-icon');
+            const isOpen = item.classList.contains('open');
+
+            // close others
+            document.querySelectorAll('.faq-item.open').forEach(i => {
+                if (i !== item) {
+                    i.classList.remove('open');
+                    const c = i.querySelector('.faq-content');
+                    if (c) c.style.maxHeight = null;
+                    const ic = i.querySelector('.faq-icon');
+                    if (ic) ic.style.transform = 'rotate(0deg)';
+                }
+            });
+
+            if (!isOpen) {
+                item.classList.add('open');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                item.classList.remove('open');
+                content.style.maxHeight = null;
+                if (icon) icon.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // keyboard accessibility
+        btn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                btn.click();
+            }
+        });
+    });
+})();
 
