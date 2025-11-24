@@ -1415,8 +1415,6 @@ h6 {
   color: rgb(213 179 170 / var(--tw-text-opacity, 1));
 }
 
-/* Ícone sempre rosado */
-
 #hero .btn-primary i,
 #intro .btn-primary i {
   --tw-text-opacity: 1;
