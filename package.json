@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/WedsonTavares/landing-page#readme",
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
+    "clean-css-cli": "^5.6.3",
+    "tailwindcss": "^3.4.17",
+    "uglify-js": "^3.19.3"
   }
 }
